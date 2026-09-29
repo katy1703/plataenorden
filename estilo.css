@@ -1,0 +1,99 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: Arial, sans-serif; 
+    background: #f0f4ff; 
+    padding: 15px;
+    min-height: 100vh;
+}
+
+.container { 
+    max-width: 700px; 
+    margin: auto; 
+    background: white; 
+    padding: 25px; 
+    border-radius: 16px; 
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1); 
+}
+
+h1 { text-align: center; color: #333; margin-bottom: 20px; font-size: 1.8rem; }
+
+.formulario { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px; 
+    margin-bottom: 20px; 
+}
+
+.formulario input[type="text"], 
+.formulario input[type="date"], 
+.formulario select { grid-column: span 1; }
+
+.formulario button { 
+    grid-column: span 2; 
+}
+
+input, select, button { 
+    padding: 12px; 
+    border-radius: 10px; 
+    border: 1px solid #ccc; 
+    font-size: 16px; 
+    width: 100%;
+}
+
+button { 
+    background: #5b6cff; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: bold; 
+    transition: 0.2s;
+}
+button:hover { background: #4a5ae0; transform: scale(1.02); }
+
+.contadores { 
+    display: flex; 
+    justify-content: space-around; 
+    font-weight: bold; 
+    background: #f9f9ff;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#listaTareas div { 
+    background: #f9f9ff; 
+    padding: 12px; 
+    border-radius: 10px; 
+    margin-bottom: 10px; 
+    border-left: 5px solid #5b6cff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    .container { padding: 15px; border-radius: 12px; }
+    h1 { font-size: 1.5rem; }
+    
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+    .formulario input[type="text"], 
+    .formulario input[type="date"], 
+    .formulario select,
+    .formulario button { 
+        grid-column: span 1; 
+    }
+
+    .contadores { flex-direction: column; gap: 5px; text-align: center; }
+
+    #listaTareas div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

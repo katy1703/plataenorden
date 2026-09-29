@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador Escolar - StudyHelp</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Organizador Escolar</h1>
+
+        <div class="formulario">
+            <select id="materia">
+                <option value="ingles">ingles</option>
+                <option value="programacion">programacion</option>
+                <option value="redes">redes</option>
+                <option value="formacion etica ">formacion etica</option>
+                <option value="matematica">matematica</option>
+                <option value="lengua">lengua</option>
+                <option value="proyecto tecnologico">proyecto tecnologico</option>
+                <option value="hardware">hardware</option>
+                <option value="software">software</option>
+                <option value="organizacion y gestion"></option>
+            </select>
+            <input type="text" id="titulo" placeholder="¿Qué tarea tenés?">
+            <input type="date" id="fecha">
+            <button onclick="agregarTarea()">Agregar</button>
+        </div>
+
+        <div class="contadores">
+            <p>Pendientes: <span id="contadorPendientes">0</span></p>
+            <p>Completadas: <span id="contadorCompletadas">0</span></p>
+        </div>
+
+        <div id="listaTareas"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
